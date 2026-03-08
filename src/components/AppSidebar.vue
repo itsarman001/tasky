@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Calendar, LayoutDashboard, FolderKanban, Users } from 'lucide-vue-next'
+import { Calendar, LayoutDashboard, FolderKanban, Users, GalleryVerticalEnd } from 'lucide-vue-next'
 import {
   Sidebar,
   SidebarHeader,
@@ -51,8 +51,8 @@ const items = [
               <GalleryVerticalEnd class="size-4" />
             </div>
             <div class="grid flex-1 text-left text-sm leading-tight">
-              <span class="truncate font-semibold">Acme Inc</span>
-              <span class="truncate text-xs">Enterprise</span>
+              <span class="truncate font-semibold">Tasky</span>
+              <span class="truncate text-xs">Personal Task Manager</span>
             </div>
           </SidebarMenuButton>
         </SidebarMenuItem>
