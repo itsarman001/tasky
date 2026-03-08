@@ -39,7 +39,7 @@ const items = [
 </script>
 
 <template>
-  <Sidebar>
+  <Sidebar variant="floating" collapsible="icon">
     <!-- Sidebar Header -->
     <SidebarHeader>
       <SidebarMenu>
