@@ -12,7 +12,7 @@ import { SidebarTrigger, SidebarInset } from '@/components/ui/sidebar'
     <SidebarInset class="flex flex-col flex-1">
       <header class="h-16 border-b border-border bg-background flex items-center px-6">
         <Header class="w-full">
-          <template #append><SidebarTrigger /></template>
+          <template #prepend><SidebarTrigger /></template>
         </Header>
       </header>
 

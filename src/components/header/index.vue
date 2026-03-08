@@ -6,7 +6,7 @@ import Notification from '@/components/common/Notification.vue'
 <template>
   <div class="flex items-center w-full">
     <div>
-      <slot name="append"></slot>
+      <slot name="prepend"></slot>
     </div>
     <div class="flex items-center gap-2 ml-auto">
       <Notification />
