@@ -1,48 +1,43 @@
-# .
+# ⚡ Velocity | Personal Task Manager
 
-This template should help get you started developing with Vue 3 in Vite.
+A high-performance, aesthetically pleasing personal task manager featuring a unified dashboard, drag-and-drop Kanban boards, and deep Google Calendar integration. Built with a focus on speed, customizability, and a "Pro" user experience.
 
-## Recommended IDE Setup
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Vue](https://img.shields.io/badge/Vue.js-3.x-4fc08d?logo=vue.js)
+![Tailwind](https://img.shields.io/badge/Tailwind_CSS-3.x-38bdf8?logo=tailwind-css)
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+---
 
-## Recommended Browser Setup
+## ✨ Key Features
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+- **📊 Unified Dashboard:** A bird's-eye view of your productivity, including "Today's Focus," upcoming events, and task completion analytics.
+- **🖱️ Drag-and-Drop Kanban:** Effortlessly manage task lifecycles with a fluid, interactive board built for speed.
+- **📅 Google Calendar Sync:** Two-way synchronization. See your events in-app and push task deadlines to your mobile calendar instantly.
+- **💬 Integrated Messaging:** A dedicated space for "Notes to Self" or collaborative threads with task-linking capabilities.
+- **🎨 Dynamic Theming:** Full **shadcn-vue** integration supporting Light/Dark modes and custom accent color palettes.
 
-## Type Support for `.vue` Imports in TS
+## 🛠️ Tech Stack
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- **Frontend:** [Vue 3 (Vite)](https://vuejs.org/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **UI Components:** [shadcn-vue](https://www.shadcn-vue.com/)
+- **State Management:** [Pinia](https://pinia.vuejs.org/)
+- **Icons:** [Lucide Vue Next](https://lucide.dev/)
+- **Drag & Drop:** [@vueuse/integrations](https://vueuse.org/) (Sortable.js)
 
-## Customize configuration
+---
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## 🚀 Getting Started
 
-## Project Setup
+### Prerequisites
 
-```sh
-pnpm install
-```
+- Node.js (v18 or higher)
+- pnpm / npm / yarn
 
-### Compile and Hot-Reload for Development
+### Installation
 
-```sh
-pnpm dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-pnpm build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-pnpm lint
-```
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/your-username/velocity-task-manager.git](https://github.com/your-username/velocity-task-manager.git)
+   cd velocity-task-manager
+   ```
