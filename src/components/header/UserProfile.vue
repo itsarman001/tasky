@@ -4,7 +4,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 </script>
 
 <template>
-  <!-- TODO: Separator  -->
+  <!-- TODO: Use Separator instead of borders -->
   <div class="flex items-center gap-4 border-l-2 border-border pl-2">
     <div>Name</div>
     <Avatar>

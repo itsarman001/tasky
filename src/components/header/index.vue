@@ -5,7 +5,9 @@ import Notification from '@/components/common/Notification.vue'
 </script>
 <template>
   <div class="flex items-center w-full">
-    <div>Breadcrumbs</div>
+    <div>
+      <slot name="append"></slot>
+    </div>
     <div class="flex items-center gap-2 ml-auto">
       <Notification />
       <ThemeToggle />

@@ -1,14 +1,19 @@
 <script setup lang="ts">
 import Header from '@/components/header/index.vue'
+import AppSidebar from '@/components/AppSidebar.vue'
+import { SidebarTrigger, SidebarInset } from '@/components/ui/sidebar'
 </script>
 
 <template>
   <div class="flex h-screen w-full overflow-hidden bg-background text-foreground">
-    <aside class="w-64 border-r border-border bg-card p-4">Sidebar Content</aside>
+    <!-- <aside class="w-64 border-r border-border bg-card p-4">Sidebar Content</aside> -->
+    <AppSidebar />
 
-    <div class="flex flex-col flex-1">
+    <SidebarInset class="flex flex-col flex-1">
       <header class="h-16 border-b border-border bg-background flex items-center px-6">
-        <Header class="w-full" />
+        <Header class="w-full">
+          <template #append><SidebarTrigger /></template>
+        </Header>
       </header>
 
       <main class="flex-1 overflow-y-auto bg-background p-6">
@@ -20,6 +25,6 @@ import Header from '@/components/header/index.vue'
       >
         Footer / Status Bar
       </footer>
-    </div>
+    </SidebarInset>
   </div>
 </template>

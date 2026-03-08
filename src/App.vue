@@ -1,10 +1,13 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
 import MainLayout from '@/layouts/MainLayout.vue'
+import { SidebarProvider } from '@/components/ui/sidebar'
 </script>
 
 <template>
-  <MainLayout>
-    <RouterView />
-  </MainLayout>
+  <SidebarProvider>
+    <MainLayout>
+      <RouterView />
+    </MainLayout>
+  </SidebarProvider>
 </template>
