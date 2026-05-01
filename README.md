@@ -1,43 +1,73 @@
-# ⚡ Velocity | Personal Task Manager
+# React + TypeScript + Vite
 
-A high-performance, aesthetically pleasing personal task manager featuring a unified dashboard, drag-and-drop Kanban boards, and deep Google Calendar integration. Built with a focus on speed, customizability, and a "Pro" user experience.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Vue](https://img.shields.io/badge/Vue.js-3.x-4fc08d?logo=vue.js)
-![Tailwind](https://img.shields.io/badge/Tailwind_CSS-3.x-38bdf8?logo=tailwind-css)
+Currently, two official plugins are available:
 
----
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## ✨ Key Features
+## React Compiler
 
-- **📊 Unified Dashboard:** A bird's-eye view of your productivity, including "Today's Focus," upcoming events, and task completion analytics.
-- **🖱️ Drag-and-Drop Kanban:** Effortlessly manage task lifecycles with a fluid, interactive board built for speed.
-- **📅 Google Calendar Sync:** Two-way synchronization. See your events in-app and push task deadlines to your mobile calendar instantly.
-- **💬 Integrated Messaging:** A dedicated space for "Notes to Self" or collaborative threads with task-linking capabilities.
-- **🎨 Dynamic Theming:** Full **shadcn-vue** integration supporting Light/Dark modes and custom accent color palettes.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 🛠️ Tech Stack
+## Expanding the ESLint configuration
 
-- **Frontend:** [Vue 3 (Vite)](https://vuejs.org/)
-- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-- **UI Components:** [shadcn-vue](https://www.shadcn-vue.com/)
-- **State Management:** [Pinia](https://pinia.vuejs.org/)
-- **Icons:** [Lucide Vue Next](https://lucide.dev/)
-- **Drag & Drop:** [@vueuse/integrations](https://vueuse.org/) (Sortable.js)
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
----
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-## 🚀 Getting Started
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
-### Prerequisites
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
 
-- Node.js (v18 or higher)
-- pnpm / npm / yarn
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-### Installation
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/your-username/velocity-task-manager.git](https://github.com/your-username/velocity-task-manager.git)
-   cd velocity-task-manager
-   ```
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
